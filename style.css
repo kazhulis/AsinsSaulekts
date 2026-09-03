@@ -118,12 +118,8 @@ a:focus-visible {
   font-size: clamp(2rem, 2.7vw, 2.9rem);
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: var(--paper);
+  color: #ffffff;
   transition: opacity 0.2s ease, transform 0.2s ease;
-  background: linear-gradient(135deg, var(--paper) 0%, rgba(212, 18, 38, 0.5) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .brand-link:hover,
@@ -215,12 +211,8 @@ a:focus-visible {
   font-size: clamp(4rem, 7vw, 7rem);
   line-height: 0.88;
   letter-spacing: -0.05em;
-  color: var(--paper);
+  color: #ffffff;
   text-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-  background: linear-gradient(135deg, var(--paper) 0%, rgba(212, 18, 38, 0.8) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   animation: fadeInUp 0.8s ease-out;
 }
 
@@ -430,10 +422,7 @@ a:focus-visible {
   color: var(--paper);
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 0.95;
-  background: linear-gradient(135deg, var(--paper) 0%, rgba(212, 18, 38, 0.6) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .story-copy {
@@ -472,10 +461,7 @@ blockquote {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.3rem, 4vw, 4rem);
   line-height: 1.1;
-  background: linear-gradient(135deg, var(--paper) 0%, rgba(212, 18, 38, 0.7) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
   max-width: 850px;
 }
 
@@ -520,10 +506,7 @@ blockquote {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  background: linear-gradient(135deg, var(--paper) 0%, rgba(212, 18, 38, 0.7) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .author-copy p {
@@ -572,10 +555,7 @@ section[id] {
   color: var(--paper);
   font-size: clamp(2.4rem, 4.3vw, 4rem);
   line-height: 0.96;
-  background: linear-gradient(135deg, var(--paper) 0%, rgba(212, 18, 38, 0.6) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .illustration-carousel {
