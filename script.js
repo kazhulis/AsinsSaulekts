@@ -23,22 +23,48 @@ cards.forEach((card) => {
 });
 
 const illustrationImages = [
-  'images/3.png',
-  'images/4.png',
-  'images/10.png',
-  'images/11.png'
+  { src: 'images/3.png', alt: 'Asins saullēkts ilustrācija - maina skats uz Livonijas mežiem' },
+  { src: 'images/4.png', alt: 'Asins saullēkts ilustrācija - jauneklis Jānis mežā' },
+  { src: 'images/10.png', alt: 'Asins saullēkts ilustrācija - kauju ainas' },
+  { src: 'images/11.png', alt: 'Asins saullēkts ilustrācija - ievainots jauneklis' }
 ];
 
 const illustrationImage = document.getElementById('illustration-image');
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
+const illustrationStage = document.querySelector('.illustration-stage');
 
 let currentIllustrationIndex = 0;
 
 function renderIllustration(index) {
   if (!illustrationImage) return;
-  illustrationImage.src = illustrationImages[index];
-  illustrationImage.alt = `Ilustrācija ${index + 1}`;
+  illustrationImage.src = illustrationImages[index].src;
+  illustrationImage.alt = illustrationImages[index].alt;
+  updateDots(index);
+}
+
+function updateDots(index) {
+  document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+function createCarouselDots() {
+  const dotsContainer = document.createElement('div');
+  dotsContainer.className = 'carousel-dots';
+  
+  illustrationImages.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+    dot.setAttribute('aria-label', `Go to illustration ${index + 1}`);
+    dot.addEventListener('click', () => {
+      currentIllustrationIndex = index;
+      renderIllustration(currentIllustrationIndex);
+    });
+    dotsContainer.appendChild(dot);
+  });
+  
+  illustrationStage?.parentElement?.appendChild(dotsContainer);
 }
 
 if (prevBtn && nextBtn && illustrationImage) {
@@ -51,6 +77,23 @@ if (prevBtn && nextBtn && illustrationImage) {
     currentIllustrationIndex = (currentIllustrationIndex + 1) % illustrationImages.length;
     renderIllustration(currentIllustrationIndex);
   });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!illustrationImage) return;
+    const illustCarousel = illustrationImage.closest('.illustration-carousel');
+    if (!illustCarousel) return;
+    
+    if (e.key === 'ArrowLeft') {
+      currentIllustrationIndex = (currentIllustrationIndex - 1 + illustrationImages.length) % illustrationImages.length;
+      renderIllustration(currentIllustrationIndex);
+    } else if (e.key === 'ArrowRight') {
+      currentIllustrationIndex = (currentIllustrationIndex + 1) % illustrationImages.length;
+      renderIllustration(currentIllustrationIndex);
+    }
+  });
+
+  createCarouselDots();
 }
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -71,6 +114,27 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       behavior: 'smooth'
     });
   });
+});
+
+// Intersection Observer for scroll-triggered animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.animationPlayState = 'running';
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+// Observe sections for animation
+document.querySelectorAll('section').forEach((section) => {
+  section.style.animationPlayState = 'paused';
+  observer.observe(section);
 });
 
 const yearEl = document.getElementById('year');
