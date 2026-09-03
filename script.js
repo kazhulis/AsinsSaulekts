@@ -22,6 +22,37 @@ cards.forEach((card) => {
   });
 });
 
+const illustrationImages = [
+  'images/3.png',
+  'images/4.png',
+  'images/10.png',
+  'images/11.png'
+];
+
+const illustrationImage = document.getElementById('illustration-image');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+let currentIllustrationIndex = 0;
+
+function renderIllustration(index) {
+  if (!illustrationImage) return;
+  illustrationImage.src = illustrationImages[index];
+  illustrationImage.alt = `Ilustrācija ${index + 1}`;
+}
+
+if (prevBtn && nextBtn && illustrationImage) {
+  prevBtn.addEventListener('click', () => {
+    currentIllustrationIndex = (currentIllustrationIndex - 1 + illustrationImages.length) % illustrationImages.length;
+    renderIllustration(currentIllustrationIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIllustrationIndex = (currentIllustrationIndex + 1) % illustrationImages.length;
+    renderIllustration(currentIllustrationIndex);
+  });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {
     const targetId = link.getAttribute('href');
