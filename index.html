@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asins Saulekts | Book Showcase</title>
+    <meta
+      name="description"
+      content="A simple showcase page for a curated collection of books."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">Asins Saulekts</div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#collection">Collection</a>
+          <a href="#featured">Featured</a>
+          <a href="#about">About</a>
+        </nav>
+        <a class="button button-small" href="#collection">Browse books</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Curated reading list</p>
+            <h1>Books that spark imagination and slow down time.</h1>
+            <p class="lead">
+              Explore thoughtful stories, inspiring ideas, and beautifully written
+              books selected for curious minds.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#collection">Explore collection</a>
+              <a class="button button-alt" href="#featured">View highlights</a>
+            </div>
+            <ul class="hero-stats" aria-label="Book statistics">
+              <li><strong>12</strong><span>titles</span></li>
+              <li><strong>4</strong><span>genres</span></li>
+              <li><strong>20k+</strong><span>readers</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-card" aria-label="Featured book highlight">
+            <div class="mini-tag">Featured title</div>
+            <div class="book-cover featured-cover">M</div>
+            <div class="book-details">
+              <p class="meta">Fantasy • 2026</p>
+              <h2>The Midnight Orchard</h2>
+              <p>
+                A luminous story about memory, belonging, and the courage to begin
+                again.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collection" class="collection">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Collection</p>
+              <h2>Pick your next favorite</h2>
+            </div>
+            <div class="filters" aria-label="Book filters">
+              <button class="filter-btn active" data-filter="all" type="button">All</button>
+              <button class="filter-btn" data-filter="fiction" type="button">Fiction</button>
+              <button class="filter-btn" data-filter="fantasy" type="button">Fantasy</button>
+              <button class="filter-btn" data-filter="nonfiction" type="button">Nonfiction</button>
+              <button class="filter-btn" data-filter="self-help" type="button">Self-help</button>
+            </div>
+          </div>
+
+          <div class="book-grid">
+            <article class="book-card" data-category="fiction">
+              <div class="book-cover fiction-cover">M</div>
+              <div class="book-info">
+                <p class="meta">Fiction</p>
+                <h3>The Midnight Orchard</h3>
+                <p class="author">by Lena Hart</p>
+              </div>
+            </article>
+
+            <article class="book-card" data-category="fantasy">
+              <div class="book-cover fantasy-cover">S</div>
+              <div class="book-info">
+                <p class="meta">Fantasy</p>
+                <h3>Starlight in Ash</h3>
+                <p class="author">by Mira Sol</p>
+              </div>
+            </article>
+
+            <article class="book-card" data-category="nonfiction">
+              <div class="book-cover nonfiction-cover">Q</div>
+              <div class="book-info">
+                <p class="meta">Nonfiction</p>
+                <h3>The Quiet Atlas</h3>
+                <p class="author">by Elena Voss</p>
+              </div>
+            </article>
+
+            <article class="book-card" data-category="self-help">
+              <div class="book-cover selfhelp-cover">M</div>
+              <div class="book-info">
+                <p class="meta">Self-help</p>
+                <h3>Mind Over Matter</h3>
+                <p class="author">by Theo Price</p>
+              </div>
+            </article>
+
+            <article class="book-card" data-category="fantasy">
+              <div class="book-cover fantasy-cover">W</div>
+              <div class="book-info">
+                <p class="meta">Fantasy</p>
+                <h3>Woven in Starlight</h3>
+                <p class="author">by Iris Vale</p>
+              </div>
+            </article>
+
+            <article class="book-card" data-category="fiction">
+              <div class="book-cover fiction-cover">L</div>
+              <div class="book-info">
+                <p class="meta">Fiction</p>
+                <h3>Letters to the Last Summer</h3>
+                <p class="author">by Clara West</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="featured">
+        <div class="container feature-layout">
+          <div class="feature-copy">
+            <p class="eyebrow">Why readers return</p>
+            <h2>Thoughtful books for deeper conversations.</h2>
+            <p>
+              Every title on the shelf was chosen for its voice, depth, and the kind
+              of reflection it leaves behind long after the final page.
+            </p>
+          </div>
+
+          <div class="feature-points">
+            <div class="point">
+              <span>01</span>
+              <h3>Curated picks</h3>
+              <p>Fresh recommendations across fiction, fantasy, and ideas.</p>
+            </div>
+            <div class="point">
+              <span>02</span>
+              <h3>Beautiful reads</h3>
+              <p>Stories designed to slow the pace and invite attention.</p>
+            </div>
+            <div class="point">
+              <span>03</span>
+              <h3>Shared discovery</h3>
+              <p>A collection meant to spark discussion and inspiration.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="about" class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand">Asins Saulekts</div>
+          <p>Stories worth keeping close.</p>
+        </div>
+        <p>© <span id="year"></span> Asins Saulekts</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
