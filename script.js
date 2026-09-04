@@ -23,10 +23,38 @@ cards.forEach((card) => {
 });
 
 const illustrationImages = [
-  { src: 'images/3.png', alt: 'Asins saullēkts ilustrācija - maina skats uz Livonijas mežiem' },
-  { src: 'images/4.png', alt: 'Asins saullēkts ilustrācija - jauneklis Jānis mežā' },
-  { src: 'images/10.png', alt: 'Asins saullēkts ilustrācija - kauju ainas' },
-  { src: 'images/11.png', alt: 'Asins saullēkts ilustrācija - ievainots jauneklis' }
+  {
+    src: 'images/3-480.jpg',
+    srcset: 'images/3-480.jpg 480w, images/3-760.jpg 760w',
+    sizes: '(max-width: 640px) 100vw, 520px',
+    alt: 'Asins saullēkts ilustrācija - maina skats uz Livonijas mežiem',
+    width: 1231,
+    height: 1733
+  },
+  {
+    src: 'images/4-480.jpg',
+    srcset: 'images/4-480.jpg 480w, images/4-760.jpg 760w',
+    sizes: '(max-width: 640px) 100vw, 520px',
+    alt: 'Asins saullēkts ilustrācija - jauneklis Jānis mežā',
+    width: 1216,
+    height: 1731
+  },
+  {
+    src: 'images/10-480.jpg',
+    srcset: 'images/10-480.jpg 480w, images/10-760.jpg 760w',
+    sizes: '(max-width: 640px) 100vw, 520px',
+    alt: 'Asins saullēkts ilustrācija - kauju ainas',
+    width: 1229,
+    height: 1733
+  },
+  {
+    src: 'images/11-480.jpg',
+    srcset: 'images/11-480.jpg 480w, images/11-760.jpg 760w',
+    sizes: '(max-width: 640px) 100vw, 520px',
+    alt: 'Asins saullēkts ilustrācija - ievainots jauneklis',
+    width: 1225,
+    height: 1743
+  }
 ];
 
 const illustrationImage = document.getElementById('illustration-image');
@@ -38,8 +66,13 @@ let currentIllustrationIndex = 0;
 
 function renderIllustration(index) {
   if (!illustrationImage) return;
-  illustrationImage.src = illustrationImages[index].src;
-  illustrationImage.alt = illustrationImages[index].alt;
+  const item = illustrationImages[index];
+  illustrationImage.src = item.src;
+  illustrationImage.srcset = item.srcset;
+  illustrationImage.sizes = item.sizes;
+  illustrationImage.alt = item.alt;
+  illustrationImage.width = item.width;
+  illustrationImage.height = item.height;
   updateDots(index);
 }
 

@@ -11,15 +11,16 @@
     <meta name="keywords" content="Asins saullēkts, Livonija, fantāzijas romāns, vēsturisks romāns, Latvija, Kristofers Krūmiņš" />
     <meta name="author" content="Kristofers Linards Krūmiņš" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://asinssaulekts.lv/" />
+    <link rel="canonical" href="https://asinssaullekts.lv/" />
+    <link rel="preload" as="image" href="images/Cover.jpg" fetchpriority="high" />
     
     <!-- Open Graph Tags -->
     <meta property="og:type" content="book" />
     <meta property="og:title" content="Asins saullēkts — Vēsturisks fantāzijas romāns" />
     <meta property="og:description" content="Vēsturiski fantāzisks piedzīvojums par izdzīvošanu, brīvību un cerību senajā Livonijā. Autors Kristofers Linards Krūmiņš." />
-    <meta property="og:image" content="https://asinssaulekts.lv/images/Cover.png" />
+    <meta property="og:image" content="https://asinssaullekts.lv/images/Cover.jpg" />
     <meta property="og:image:alt" content="Asins saullēkts grāmatas vāks" />
-    <meta property="og:url" content="https://asinssaulekts.lv/" />
+    <meta property="og:url" content="https://asinssaullekts.lv/" />
     <meta property="og:site_name" content="Asins saullēkts" />
     <meta property="og:locale" content="lv_LV" />
     
@@ -27,7 +28,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Asins saullēkts — Vēsturisks fantāzijas romāns" />
     <meta name="twitter:description" content="Vēsturiski fantāzisks piedzīvojums par izdzīvošanu un brīvību senajā Livonijā." />
-    <meta name="twitter:image" content="https://asinssaulekts.lv/images/Cover.png" />
+    <meta name="twitter:image" content="https://asinssaullekts.lv/images/Cover.jpg" />
     
     <!-- Additional Meta Tags -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -57,7 +58,7 @@
       "bookFormat": "Hardcover",
       "datePublished": "2024",
       "description": "Vēsturiski fantāzisks romāns par izdzīvošanu, brīvību un cerību senajā Livonijā. Jauneklis Jānis pamostas ievainots un bez atmiņām, bet katrs solis mežos un purvos atmodina atmiņu drumstalas.",
-      "image": "https://asinssaulekts.lv/images/Cover.png",
+      "image": "https://asinssaullekts.lv/images/Cover.jpg",
       "inLanguage": "lv",
       "isbn": "",
       "offers": {
@@ -74,8 +75,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Asins saullēkts",
-      "url": "https://asinssaulekts.lv/",
-      "logo": "https://asinssaulekts.lv/images/Cover.png",
+      "url": "https://asinssaullekts.lv/",
+      "logo": "https://asinssaullekts.lv/images/Cover.jpg",
       "sameAs": []
     }
     </script>
@@ -120,9 +121,15 @@
               <!-- Replace this path with your actual cover image file -->
               <img
                 class="book-cover-image"
-                src="images/Cover.png"
+                src="images/Cover-560.jpg"
+                srcset="images/Cover-420.jpg 420w, images/Cover-560.jpg 560w, images/Cover-900.jpg 803w"
+                sizes="(max-width: 640px) 100vw, 560px"
                 alt="Asins saullēkts grāmatas vāks"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                width="803"
+                height="1190"
               />
             </div>
           </div>
@@ -179,9 +186,14 @@
             <div class="illustration-stage">
               <img
                 id="illustration-image"
-                src="images/3.png"
+                src="images/3-480.jpg"
+                srcset="images/3-480.jpg 480w, images/3-760.jpg 760w"
+                sizes="(max-width: 640px) 100vw, 520px"
                 alt="Asins saullēkts ilustrācija - maina skats uz Livonijas mežiem"
                 loading="lazy"
+                decoding="async"
+                width="1231"
+                height="1733"
               />
             </div>
 
@@ -208,9 +220,14 @@
             <div class="author-photo-placeholder">
                <img
                 id="author-image"
-                src="images/Autors.png"
+                src="images/Autors-360.jpg"
+                srcset="images/Autors-360.jpg 360w, images/Autors-720.jpg 720w"
+                sizes="(max-width: 640px) 80vw, 360px"
                 alt="Kristofers Linards Krūmiņš - Asins saullēkts autors"
                 loading="lazy"
+                decoding="async"
+                width="941"
+                height="1172"
               />
             </div>
           </div>
@@ -234,8 +251,8 @@
         "@type": "Person",
         "name": "Kristofers Linards Krūmiņš",
         "jobTitle": "Rakstnieks un ilustrators",
-        "image": "https://asinssaulekts.lv/images/Autors.png",
-        "url": "https://asinssaulekts.lv/",
+        "image": "https://asinssaullekts.lv/images/Autors.jpg",
+        "url": "https://asinssaullekts.lv/",
         "sameAs": []
       }
       </script>

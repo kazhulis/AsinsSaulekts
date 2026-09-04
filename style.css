@@ -282,7 +282,7 @@ a:focus-visible {
 .book-cover {
   position: relative;
   width: min(100%, 560px);
-  aspect-ratio: 0.74;
+  aspect-ratio: 803 / 1190;
   border-radius: 18px;
   overflow: hidden;
   background: #0d0d0d;
@@ -403,7 +403,7 @@ a:focus-visible {
 
 .excerpt {
   padding: 2.5rem 0;
-  background: linear-gradient(90deg, rgba(212,18,38,0.08) 0%, rgba(212,18,38,0.04) 15%, transparent 40%, transparent 60%, rgba(212,18,38,0.04) 85%, rgba(212,18,38,0.08) 100%);
+  background: #000000;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   animation: fadeInUp 0.8s ease-out 0.3s both;
@@ -479,7 +479,7 @@ blockquote {
 
 .author-photo-placeholder {
   width: min(100%, 360px);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 941 / 1172;
   height: auto;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -499,7 +499,7 @@ blockquote {
 #author-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   display: block;
   background: #0d0d0d;
@@ -573,7 +573,7 @@ section[id] {
 .illustration-stage {
   position: relative;
   width: min(100%, 520px);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1231 / 1733;
   overflow: hidden;
   border-radius: 22px;
   border: 1px solid var(--line);
