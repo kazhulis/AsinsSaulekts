@@ -43,7 +43,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=5" />
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -63,7 +63,7 @@
       "isbn": "",
       "offers": {
         "@type": "Offer",
-        "url": "https://buki.lv/asins-saullekts",
+        "url": "https://www.janisroze.lv/en/fi5p-asins-saullekts.html?srsltid=AU7gw4UKO98CBJKIDJWwYtUkCA4dVGQTxiixb24olHpKbwZglb6pQk6h",
         "priceCurrency": "EUR",
         "price": ""
       }
@@ -77,7 +77,16 @@
       "name": "Asins saullēkts",
       "url": "https://asinssaullekts.lv/",
       "logo": "https://asinssaullekts.lv/images/Cover.jpg",
-      "sameAs": []
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "klk.skorpions@gmail.com",
+        "telephone": ""
+      }],
+      "sameAs": [
+        "https://instagram.com/yourprofile",
+        "https://facebook.com/yourpage"
+      ]
     }
     </script>
   </head>
@@ -88,7 +97,7 @@
         <nav class="nav-links" aria-label="Galvenā navigācija">
           <a href="#about">Par grāmatu</a>
           <a href="#ilustracijas">Ilustrācijas</a>
-          <a href="#autors">Autors</a>
+          <a href="#autors">Kontakti</a>
         </nav>
       </div>
     </header>
@@ -106,7 +115,7 @@
             <div class="hero-actions">
               <a 
                class="button"
-                href="https://buki.lv/asins-saullekts"
+                href="https://www.janisroze.lv/en/fi5p-asins-saullekts.html?srsltid=AU7gw4UKO98CBJKIDJWwYtUkCA4dVGQTxiixb24olHpKbwZglb6pQk6h"
                 target="_blank"
                 rel="noopener noreferrer">Pirkt</a>
               <a
@@ -235,11 +244,21 @@
           <div class="author-copy">
             <p class="section-kicker">Autors</p>
             <h2>Kristofers Linards Krūmiņš</h2>
-            <p>
-              Melnbalto autora zīmējumi iedvesmo katru lapu: miglas pielietas
-              pļavas, svētbirzis un seni rituāli atdzīvojas aizraujošā, vizuāli
-              spēcīgā pasaulē.
-            </p>
+            <h4>
+              Rakstnieks un ilustrators.
+            </h4>
+            <div class="author-bio">
+              <p>
+                Kristofers ir aizrautīgs vēstures un kultūras pētnieks, kas
+                iedvesmojas no senās Livonijas un Baltijas reģiona mantojuma.
+                Viņa darbi bieži apvieno literāro stāstījumu ar vizuālo mākslu,
+                radot unikālu pieredzi lasītājiem.
+              </p>
+            </div>
+            <div id="kontakti" class="author-contact">
+              <p class="contact-kicker">Kontakti:</p>
+              <p><a href="mailto:klk.skorpions@gmail.com">klk.skorpions@gmail.com</a></p>
+            </div>
           </div>
         </div>
       </section>
@@ -253,6 +272,7 @@
         "jobTitle": "Rakstnieks un ilustrators",
         "image": "https://asinssaullekts.lv/images/Autors.jpg",
         "url": "https://asinssaullekts.lv/",
+        "email": "klk.skorpions@gmail.com",
         "sameAs": []
       }
       </script>
@@ -261,6 +281,10 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="brand small">Asins saullēkts</div>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="privacy.html">Privātuma politika</a>
+          <a href="terms.html">Noteikumi</a>
+        </nav>
         <p>© <span id="year"></span> Kristofers Linards Krūmiņš</p>
       </div>
     </footer>
